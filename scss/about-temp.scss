@@ -1,0 +1,75 @@
+$violet: rgb(149, 35, 194);
+$blue: rgb(73, 190, 219);
+.about{
+    padding-bottom: 35%;
+    .about-glass-box{
+        position: relative;
+        padding: 25px;
+        .about-glass{
+            position: absolute;
+            width: 60%;
+            align-items: center;
+            align-self: center;
+            top: 19%;
+            left: 19%;
+            overflow: hidden;
+            z-index: 4;
+            background: rgba(37, 37, 37, 0.226);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .about-glass-globe{
+        position: absolute;
+        animation:spin 6s linear infinite;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        margin: auto;
+        // margin-top: 140px;
+        border-radius: 50%;
+        box-shadow: inset 0 0 50px #fff, inset 20px 0 141px #9523c2, inset -20px 0 60px #49bedb, inset 20px 0 164px #9523c2, inset -20px 0 300px #49bedb, 0 0 50px #fff, -10px 0 60px #9523c2, 10px 0 143px #49bedb;
+            // inset 0 0 50px #fff,
+            // inset 20px 0 60px $violet,
+            // inset -20px 0 60px $blue,
+            // inset 20px 0 300px $violet,
+            // inset -20px 0 300px $blue,
+            //   0 0 50px #fff,
+            //   -10px 0 60px $violet,
+            //   10px 0 60px $blue;
+      .about-text{
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          p{
+              position: absolute;
+              font-size: 1.2em;
+              display: inline-block;
+              z-index: 40;
+            //   left: 50%;
+              transform-origin: 0 100px;
+          }
+      }
+    }
+    @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+    .gradient-container{
+        height: 150px;
+        background: linear-gradient(#b3b3b3, #3f3f3f);
+    }
+}
+
+@media screen and (max-width: 750px){
+    .about-glass{
+        width: 100%!important;
+        height: initial;
+        min-height: 30em;
+        top: 2%!important;
+        padding: 35px!important;
+        vertical-align: middle;
+        left: 1%!important;
+        align-items: center!important;
+    }
+}

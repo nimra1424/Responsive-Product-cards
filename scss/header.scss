@@ -1,0 +1,181 @@
+
+.header{
+    display: flex;
+    position: relative;
+    // background: url(./img/1.jpg) center no-repeat fixed;
+    height: 600px;
+    overflow: hidden;
+    
+    vertical-align: center;
+    align-items: center;
+
+    img{
+        width: 100%;
+        // transform: rotate(360deg);
+        height: 500px;
+        position: relative;
+        // position: fixed;
+    }
+    
+    h1{
+        position: absolute;
+        font-weight: 500;
+        // transform: translateY(-50%);
+    }
+    .media-icons{
+        display: flex;
+        bottom: 2%;
+        position: absolute;
+        text-align: center;
+        justify-content: space-evenly;
+        align-items: center;
+        // letter-spacing: 10px;
+        font-size: 13px!important;
+        
+        ul{
+            display: flex;
+            list-style: none;
+            a{
+                color: black;
+            }
+        }
+    }
+    // .links{
+    //     display: flex;
+    //     top: 3%;
+    //     right: 2%;
+    //     position: absolute;
+    //     justify-content: space-evenly;
+    //     // align-items: center;
+    //     letter-spacing: 2px;
+    //     font-size: 16px;
+        
+    //     ul{
+            
+    //         display: flex;
+    //         list-style: none;
+    //         margin-left: 20px;
+    //         a{
+    //             margin-right: 20px;
+    //             text-decoration: none;
+    //             font-weight: 700;
+    //             color: black;
+    //             &:hover{
+    //                 text-decoration: 2px solid #b3b3b3 line-through;
+    //                 // color: #b3blb3b3;
+                    
+    //                 display: inline-block;
+    //                 transform: scaleY(1s);
+    //                 letter-spacing: 2px;
+    //                 vertical-align: middle;
+    //                 font-size: 18px;
+    //             }
+    //         }
+    //     }
+    // }
+    .desktop-hide{
+        display: none;
+        z-index: 111;
+        position: fixed;
+        font-size: 20px;
+        top: 1%;
+        right: 4%;
+        
+    }
+
+    .glass{
+        position: absolute;
+        width: 42%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(170, 170, 170, 0.226);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        .glass-title{
+            font-family: "Neonderthaw", sans-serif;
+            background-image: url(img/white-curved-lines3.jpg);
+            background-size: cover;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            top: 45%;
+            font-size: 100px;
+            right: 7%;
+            z-index: 5;
+            animation: text1 0.8s ease-in forwards;
+        }
+        .glass-title-hidden{
+            display: none;
+            background-image: url(img/white-curved-lines3.jpg);
+            background-size: cover;
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            // top: 45%;
+            font-size: 100px;
+            // right: 0;
+            z-index: 5;
+            animation: text1 0.8s ease-in forwards;
+        }
+        .regular-title{
+            color: rgb(255, 255, 255);
+            left: 100%;
+            bottom: 14%;
+            font-size: 100px;
+            animation-delay: 500ms;
+            animation: text2 0.8s ease-in forwards;
+        }
+        .hidden{
+            display: none;
+            font-size: 18px;
+            letter-spacing: 18px;
+            padding-left: 14px;
+            padding-top: 69px;
+            vertical-align: middle;
+        }
+    }
+
+}
+@media screen and (max-width: 750px){
+    .header{
+        overflow: unset;
+    }
+    .glass{
+        width: 90%!important;
+        height: initial;
+        min-height: 30em;
+        top: 2%!important;
+        vertical-align: middle;
+        left: 5%!important;
+        align-items: center!important;
+        // transform: translate(-50% , -50%);
+        // border-radius: 15px;
+    }
+    .glass-title{
+        display: none;
+    }
+    .glass-title-hidden{
+        display: block!important;
+        top: 36%;
+    }
+    .regular-title{
+        display: none;
+    }
+    .hidden{
+        display: block!important;
+    }
+    .desktop-hide{
+        display: block!important;
+    }
+    .mobile-hide{
+        display: none!important;
+    }
+}
